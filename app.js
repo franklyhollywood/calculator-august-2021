@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { add, subtract, multiply } from './utils.js';
+import { add, subtract, multiply, divide } from './utils.js';
 
 const addEl1 = document.getElementById('addValue1');
 const addEl2 = document.getElementById('addValue2');
@@ -45,4 +45,20 @@ multiplyButton.addEventListener('click', () => {
 	const sum = multiply(multiplyFirstVal, multiplySecondVal);
 
 	resultEl3.textContent = sum;
+});
+
+//////////////////
+const divideEl1 = document.getElementById('divideValue1');
+const divideEl2 = document.getElementById('divideValue2');
+const divideButton = document.getElementById('divideButton');
+const resultEl4 = document.getElementById('totalDivide');
+
+console.log(divideEl1, divideEl2, divideButton, resultEl4);
+divideButton.addEventListener('click', () => {
+	const divideFirstVal = divideEl1.value;
+	const divideSecondVal = divideEl2.value;
+
+	const sum = divide(divideFirstVal, divideSecondVal);
+
+	resultEl4.textContent = sum;
 });
